@@ -98,7 +98,7 @@ class NewsDetailsFragment : Fragment(R.layout.fragment_news_details) {
 }
 
 class NewsDetailsViewModel(
-    private val newsId: String = "1",
+    private val newsId: String,
     private val newsRepository: NewsRepository
 ) : ViewModel() {
 
