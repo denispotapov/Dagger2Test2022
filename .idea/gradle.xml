@@ -11,7 +11,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api_module" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core_module" />
+            <option value="$PROJECT_DIR$/news_list_module" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

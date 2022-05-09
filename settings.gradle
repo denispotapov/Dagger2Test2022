@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Dagger2Test2022"
 include ':app'
+include ':api_module'
+include ':news_list_module'
+include ':core_module'
