@@ -2,8 +2,8 @@ package com.denispotapov.dagger2test2022
 
 import android.app.Application
 import android.content.Context
-import com.denispotapov.dagger2test2022.di.AppComponent
-import com.denispotapov.dagger2test2022.di.DaggerAppComponent
+import com.denispotapov.dagger2test2022.component.AppComponent
+import com.denispotapov.dagger2test2022.subcomponent.DaggerAppComponent
 
 class MainApp : Application() {
 
@@ -12,14 +12,14 @@ class MainApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent.builder()
+            .context(this)
+            .build()
     }
-
 }
 
 val Context.appComponent: AppComponent
     get() = when (this) {
         is MainApp -> appComponent
-        else -> this.applicationContext.appComponent
-
+        else -> applicationContext.appComponent
     }
