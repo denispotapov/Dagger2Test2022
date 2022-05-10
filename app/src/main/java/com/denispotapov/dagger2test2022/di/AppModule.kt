@@ -3,12 +3,12 @@ package com.denispotapov.dagger2test2022.di
 import com.denispotapov.dagger2test2022.data.NewsService
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.create
 
-@Module(includes = [NetworkModule::class, AppBindModule::class])
-class AppModule
-
+@InstallIn(SingletonComponent::class)
 @Module
 class NetworkModule {
 
